@@ -111,7 +111,7 @@ function checkAdult(age){
 }
 checkAdult(23);
 checkAdult(15);
-checkAdult();
+checkAdult('');
 checkAdult('fff');
 checkAdult(-4);
 checkAdult(2.5);

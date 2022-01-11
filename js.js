@@ -16,7 +16,9 @@ getModifiedArray([1,2,3,4,5,6]);
 
 function combineArray(arr1, arr2) {
     let arr3
-    arr3 = arr1.concat(arr2).filter(item => typeof item === "number"); //filter(number) doesnt work, return numbers and true/false
+    arr3 = arr1.concat(arr2).filter(item => {
+        return typeof item === "number";
+    }); //filter(number) doesnt work, return numbers and true/false
     return arr3;
 }
 console.log(combineArray([12, "User01", 22, true, -8], ["Index", 6, null, 15]));

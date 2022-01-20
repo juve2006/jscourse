@@ -17,19 +17,28 @@ class Worker {
         this.salary = this.dayRate * this.workingDays;
         console.log(this.fullName + ' salary: ' + this.salary);
     }
+
     exp = 1.2;
+
     showSalaryWithExperience() {
-        this.salary = this.salary * this.exp;
+        this.salary = this.dayRate * this.workingDays * this.exp;
         console.log(this.fullName + ' salary: ' + this.salary);
     }
 
-     get showExp () {
+    get showExp() {
         return this.exp;
     }
 
-     set setExp (value) {
-         this.exp = value;
+    set setExp(value) {
+        this.exp = value;
     }
+
+/*function sort(){
+    salary.sort(function(a,b) {
+        return a.born - b.born;
+    });
+    console.log('by date:');
+    console.log(byDate);*/
 }
 const worker1 = new Worker("John Johnson", 20, 23);
 console.log(worker1.fullName);
